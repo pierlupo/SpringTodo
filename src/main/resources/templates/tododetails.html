@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tododetails</title>
+    <head th:insert="~{fragments/head.html :: head}"></head>
+    <meta name="description" content="Todo détails">
+</head>
+<body>
+<header th:insert="~{fragments/header.html :: header}"> </header>
+<div class="containerDetails">
+    <div class="card">
+        <div class="card-header" th:text="${todo?.title}">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title" th:text="${todo?.completed}"></h5>
+            <p class="card-text" th:text="${todo?.todoDetail}"></p>
+            <p class="card-text" th:text="${todo?.categories}"></p>
+        </div>
+        <div class="card-footer text-body-secondary" th:text="${todo?.personne}">
+            <a href="#" class="btn btn-primary" th:href="${'/todo/home'}" >Retour</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

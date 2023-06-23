@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulaire</title>
+  <head th:insert="~{fragments/head.html :: head}"></head>
+  <meta name="description" content="formulaire">
+</head>
+<body>
+<header th:insert="~{fragments/header.html :: header}"></header>
+<div class="formContainer">
+  <form th:action="@{/todo/create}" method="post" th:object="${todo}">
+    <div class="formul">
+
+      <label class="labelForm" for="title">Title</label>
+      <input type="text" th:field="*{title}" class="inputForm" id="title" placeholder="ex : une tâche">
+
+
+      <label class="labelForm" for="completed">Status</label>
+      <input type="text" class="inputForm" id="completed" th:field="*{completed}" placeholder="">
+
+
+
+      <label class="labelForm" for="todoDetail">Détail</label>
+      <input type="text" class="inputForm" id="todoDetail" th:field="*{todoDetail}">
+
+      <label class="labelForm" for="personne">Personne</label>
+      <input type="text" class="inputForm" id="personne" th:field="*{personne}">
+
+
+      <label class="labelForm" for="categorie">Catégorie</label>
+      <input type="text" class="inputForm" id="categorie" th:field="*{categories}">
+
+
+      <input type="hidden" th:field="*{id}" class="inputForm" id="id" >
+
+
+      <button type="submit" class="btnForm">Validation</button>
+    </div>
+
+  </form>
+</div>
+</body>
+</html></body>
+</html>
